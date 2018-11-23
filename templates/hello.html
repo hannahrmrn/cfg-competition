@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <title>My Flask App Page</title>
+</head>
+
+<body>
+
+  {% if name == "Hannah" %}
+    <p>Hello {{name}}!</p>
+
+  {% else %}
+    <p>Hello anonymous person!</p>
+
+  {% endif %}
+
+  <p>Let's keep in touch!</p>
+
+  	<div id="contact-form">
+  		<form method="post" action="/signup">
+        <label for="firstname">First name:</label>
+        <br>
+        <input type="text" name="firstname">
+        <br>
+        <label for="lastname">Last name:</label>
+        <br>
+        <input type="text" name="lastname">
+        <br>
+  			<label for="email">Email address:</label>
+        <br>
+  			<input type="email" id="email" name="email" required="required">
+        <br>
+  			<input type="submit" value="Submit" id="submit-button">
+  		</form>
+  	</div>
+
+</body>
+
+
+
+</html>
