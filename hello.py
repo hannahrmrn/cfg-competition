@@ -2,6 +2,9 @@ import requests
 import argparse
 from flask import Flask, render_template, request
 
+print "Enter key"
+key = raw_input()
+
 app = Flask("MyApp")
 
 #parse argument for API key - run using python hello.py --key APIkey
