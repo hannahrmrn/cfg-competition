@@ -1,17 +1,22 @@
 import requests
 import argparse
+import os
 from flask import Flask, render_template, request
+from configvars import key
 
-print "Enter key"
-key = raw_input()
+#print "Enter key"
+#key = raw_input()
 
-app = Flask("MyApp")
+app = Flask("cfg-competition")
 
 #parse argument for API key - run using python hello.py --key APIkey
-parser = argparse.ArgumentParser()
-parser.add_argument('--key', type=str)
-args = parser.parse_args()
-key = args.key
+#parser = argparse.ArgumentParser()
+#parser.add_argument('--key', type=str)
+#args = parser.parse_args()
+#key = args.key
+if os.getenv('key'):
+    key = os.environ['key'] #assign variable from heroku
+
 
 def send_simple_message(email, key):
     return requests.post(
