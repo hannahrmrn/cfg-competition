@@ -4,3 +4,4 @@ Requirement already satisfied: itsdangerous>=0.24 in /Library/Frameworks/Python.
 Requirement already satisfied: Werkzeug>=0.14 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from flask) (0.14.1)
 Requirement already satisfied: click>=5.1 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from flask) (7.0)
 Requirement already satisfied: MarkupSafe>=0.23 in /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages (from Jinja2>=2.10->flask) (1.1.0)
+setuptools==1.0
