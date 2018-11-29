@@ -3,6 +3,7 @@ import argparse
 import os
 from flask import Flask, render_template, request
 from configvars import key
+from os import environ
 
 #print "Enter key"
 #key = raw_input()
@@ -49,4 +50,4 @@ def sign_up():
     send_simple_message(email, key)
     return "Email sent to: {} {}, {}".format(firstname, lastname, email)
 
-app.run(debug=True)
+app.run(host='0.0.0.0',debug=True, port=environ.get("PORT", 5000))
