@@ -1,4 +1,4 @@
 flask==1.0.2
-Jinja2==2.10
+Jinja2==2.10.1
 setuptools==1.0
 requests
